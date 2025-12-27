@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Music -->
+<audio controls autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<!-- Floating Hearts -->
+<div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💘</span>
+    <span>❤️</span>
+</div>
+
+<div class="container">
+    <div class="card">
+
+        <!-- Slideshow Image -->
+        <img id="slideshow" src="her_photo1.jpg" alt="Our Memories ❤️">
+
+        <h1>Happy Birthday ❤️</h1>
+
+        <p class="romantic-text">
+            From the moment you walked into my life,  
+            everything around me changed in the most beautiful way.  
+            You turned ordinary days into memories,  
+            silence into comfort,  
+            and my heart into a place full of love.  
+            Your smile is my favorite view,  
+            your presence is my peace,  
+            and loving you is the easiest thing I’ve ever done.  
+            On your birthday and every day after,  
+            I promise to cherish you, support you,  
+            and love you more than yesterday — always ❤️
+        </p>
+
+        <p class="from">
+            — Forever yours 💞
+        </p>
+
+    </div>
+</div>
+
+<!-- Slideshow Script -->
+<script>
+    const images = [
+        "her_photo1.jpg",
+        "her_photo2.jpg"
+    ];
+
+    let index = 0;
+    const slideshow = document.getElementById("slideshow");
+
+    setInterval(() => {
+        slideshow.style.opacity = 0;
+
+        setTimeout(() => {
+            index = (index + 1) % images.length;
+            slideshow.src = images[index];
+            slideshow.style.opacity = 1;
+        }, 500);
+
+    }, 3000);
+</script>
+
+</body>
+</html>
